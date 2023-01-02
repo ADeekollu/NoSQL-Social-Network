@@ -87,7 +87,7 @@ const thoughtController = {
         })  
         .then((dbUserData) => {
             if (!dbUserData) {
-                return res.status(404).json({ message: "Thought created but no User with this ID found"})
+                return res.status(404).json({ message: "Thought deleted"})
             }
             res.json({ message: "Thought Created"});
         })        
