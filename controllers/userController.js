@@ -20,7 +20,7 @@ const userController = {
 
     getUserById({ params }, res) {
         User.findOne({ _id: params.id })
-            .populate("Thought")
+            // .populate("Thought")
             .select("-__v")
             .then((dbUserData) => res.json(dbUserData))
             .catch((err) => {
